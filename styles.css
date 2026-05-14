@@ -390,15 +390,28 @@ h3 {
   padding: clamp(72px, 10vw, 120px) 0;
   color: white;
   background:
-    linear-gradient(rgba(55, 3, 13, 0.88), rgba(55, 3, 13, 0.88)),
+    linear-gradient(rgba(55, 3, 13, 0.9), rgba(55, 3, 13, 0.92)),
     url("assets/wedding-hero.png") center / cover fixed;
 }
 
 .location-panel {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 0.92fr);
   align-items: center;
-  justify-content: space-between;
-  gap: 34px;
+  gap: clamp(28px, 6vw, 76px);
+}
+
+.location-image {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+.location-copy {
+  min-width: 0;
 }
 
 @keyframes openLeft {
